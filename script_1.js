@@ -15,3 +15,4 @@ Tu stockeras cette entrée dans une variable et tu afficheras :
 let answer = "";
 console.log(answer = prompt("Quel est ton prénom?"))
 console.log("Bonjour" + " " + answer + "!")
+
