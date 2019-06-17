@@ -68,9 +68,9 @@ let entrepreneursAgeToday = entrepreneurs.map(function(person) {
 console.log(entrepreneursAgeToday); 
 */
 
-/*
+/*==============================================================
 Trie les entrepreneurs par ordre alphabétique du nom de famille.
-*/
+==============================================================*/
 
 entrepreneurs.sort((a, b) => (a.last > b.last) ? 1 : -1); 
 console.log(entrepreneurs);
