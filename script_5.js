@@ -29,6 +29,7 @@ et leurs réponses :
 Est-ce que tous les livres ont été au moins empruntés une fois ?
 ================================================================*/
 
+/*
 var isRented = true
 
 for (var i = 0; i < books.length; i++) {
@@ -43,26 +44,59 @@ for (var i = 0; i < books.length; i++) {
 if (isRented) {
     console.log("Tous les livres ont été au moins empruntés une fois.");
 };      
-
-
-
-/*
-let rentedOnce = books.map(function(rent) { 
-    if (rent.rented === 0)  {
-        return "Certains livre n'ont pas été loués.";
-    }
-    else {
-        return "Tous les livres ont été au moins empruntés une fois.";
-    }
-});
 */
 
+/*================================================================
+Quel est le livre le plus emprunté ?
+================================================================*/
 
 
-/*
-Quel est livre le plus emprunté ?
+
+/*================================================================
 Quel est le livre le moins emprunté ?
+================================================================*/
+
+
+
+/*================================================================
 Trouve le livre avec l'ID: 873495 ;
-Supprime le livre avec l'ID: 133712 ;
-Trie les livres par ordre alphabétique (sans celui avec l'ID 133712 car il est supprimé).
+================================================================*/
+
+/*
+let bookID = books.find(book => book.id === 873495);
+
+console.log(bookID); 
 */
+
+/*================================================================
+Supprime le livre avec l'ID: 133712 ;
+================================================================*/
+
+/*
+let bookForRemoveID = books.find(book => book.id === 133712);
+books.splice(books.indexOf(bookForRemoveID),1);
+
+console.log(books); 
+*/
+
+/*=========================================================================================
+Trie les livres par ordre alphabétique (sans celui avec l'ID 133712 car il est supprimé).
+=========================================================================================*/
+
+/*
+books.sort(function(a, b) {
+    var titleA = a.title.toUpperCase(); // ignore upper and lowercase
+    var titleB = b.title.toUpperCase(); // ignore upper and lowercase
+    if (titleA < titleB) {
+      return -1;
+    }
+    if (titleA > titleB) {
+      return 1;
+    }
+  
+    // names must be equal
+    return 0;
+  });
+
+  console.log(books);
+  */
